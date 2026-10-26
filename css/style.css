@@ -1,0 +1,115 @@
+/* Mobile */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.quote {
+    margin: 1rem 0 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555555;
+    margin: 1.25rem 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+/* Tablet sizing */
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 2rem 3rem;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 2rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+/* Laptop sizing */
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+}
+
+/* wider/taller for phone */
+
+@media (orientation: landscape) and (max-height: 500px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    hr {
+        margin: 0.75rem 0;
+    }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .cards {
+        column-gap: 3rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
